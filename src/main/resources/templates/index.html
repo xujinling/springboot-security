@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<h1>登录成功</h1>
+		用户名：<span sec:authentication="name"></span>
+
+		<span sec:authorize="hasRole('ROLE_ADMIN')">角色：admin</span>		
+
+		<span sec:authorize="hasRole('ROLE_USER')">角色：user</span>
+	
+		
+	</div>
+</body>
+</html>
